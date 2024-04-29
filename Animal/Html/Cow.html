@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <Style>
+    .btn-primary {
+      color: #fff;
+      background-color: #04c953;
+      border-color: #357ebd;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open>.dropdown-toggle.btn-primary {
+      color: #fff;
+      background-color: #db0083;
+      border-color: #285e8e;
+    }
+
+
+    .navbar-nav li a:hover,
+    .navbar-nav li a.active {
+      color: #088178;
+    }
+
+    .navbar-nav li a.active::after,
+    .navbar-nav li a:hover::after {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background: #088178;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+  </Style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <div class="container">
+        <a class="navbar-brand" href="./PetKonwledgeBase.html">PetknowledgeBase</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./PetKonwledgeBase.html">
+              <h5>Home</h5>
+            </a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./${pet.image_name.toLowerCase()}.html?pettype=${pet.image_name.toLowerCase()}">
+                <h5>${pet.image_name}</h5>
+            </a>
+        </li> -->
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Add Natuer Information -->
+
+
+  <!-- carousel strat here -->
+  <div id="carouselExampleCaptions" class="carousel slide" style="margin-bottom: 10px;">
+    <div class="carousel-indicators" id="carouselIndicators"></div>
+    <div class="carousel-inner" id="carouselInner"></div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- </div> -->
+
+  <!-- Horizontal card -->
+  <!-- <div class="container">
+  <div class="card mb-3" id="card"style="max-width: 1240px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.ytimg.com/vi/Rm284rm-esA/maxresdefault.jpg" class="img-fluid rounded-start" style="height: 60vh;"alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">Pet Animal Information</h2>
+          <p class="card-text">Pet Animal Information</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+  <!-- Verticle card -->
+  <!-- <div class="container">
+  <div class="row" >
+      <div class="col-md-4 col-sm-4">
+          <div class="card" >
+              <img src="../Images/gir_cow.jpg" class="card-img-top" style="width:100%; height:160px;" alt="...">
+              <div class="card-body">
+                <h5>Gir Cow:</h5>
+                <p class="card-text">Originating from the Gir forest region in Gujarat.Known for their distinctive reddish-brown coat.Excellent milk yield and adaptability to various climates.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+          <div class="card">
+              <img src="../Images/sahiwal_cow.jpg" class="card-img-top" style="width:100%; height:160px;" alt="...">
+              <div class="card-body">
+                <h5>Sahiwal Cow:</h5>
+                <p class="card-text">Originating from the Sahiwal district in Pakistan (but widely raised in India).Recognized for its reddish-brown color and well-developed udder.Known for high milk production and resistance to tropical diseases.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+          <div class="card">
+              <img src="../Images/redsindhi_cow.jpg" class="card-img-top" style="width:100%; height:160px;" alt="...">
+              <div class="card-body">
+                <h5>Red Sindhi Cow:</h5>
+                <p class="card-text">Originating from the Sindh region, now in Pakistan, but also found in India.Recognized for its red color and white markings on the face and body.Well-adapted to hot and humid climates, primarily raised for milk.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+          <div class="card">
+              <img src="../Images/deoni cow.jpg" class="card-img-top" style="width:100%; height:160px;" alt="...">
+              <div class="card-body">
+                <h5>Deoni Cow:</h5>
+                <p class="card-text">Indigenous to the Deoni taluka in Latur, Maharashtra.Typically gray or white with black markings.Dual-purpose breed, suitable for both milk and draught purposes.</p>
+              </div>
+            </div>
+      </div>
+      
+      <div class="col-md-4 col-sm-4">
+        <div class="card">
+            <img src="../Images/amrilmahal_cow.jpg" class="card-img-top" style="width:100%; height:160px;" alt="...">
+            <div class="card-body">
+                <h5>Amrit Mahal Cow:</h5>
+              <p class="card-text">Historically associated with the Vijayanagara Empire in South India.Recognized for its distinctive white to gray coat.Primarily used as a draught animal, known for endurance and strength.</p>
+            </div>
+          </div>
+    </div>
+    
+    <div class="col-md-4 col-sm-4">
+      <div class="card">
+          <img src="../Images/kankrej_cow.jpg" class="card-img-top" style="width:100%; height:160px;" alt="...">
+          <div class="card-body">
+            <h5>Kankrej Cow:</h5>
+            <p class="card-text">The Kankrej cow, indigenous to the Kankrej region in Gujarat, India, is a notable breed known for its versatility and resilience.</p>
+          </div>
+        </div>
+  </div>
+
+  </div>
+  
+</div> -->
+
+  <!-- Add this div to your HTML body -->
+  <!-- Add these divs to your HTML body -->
+  <!-- Horizontal Pet Cards Section -->
+  <div class="container">
+    <div class="row" id="horizontalPetCardsContainer">
+      <!-- Horizontal cards will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Vertical Pet Cards Section -->
+  <div class="container">
+    <div class="row" id="verticalPetCardsContainer">
+      <!-- Vertical cards will be dynamically added here -->
+    </div>
+  </div>
+  <!-- Circle Card -->
+
+
+
+
+
+  <!-- footer -->
+  <!-- <div class="container">
+  <footer class="py-5">
+  <div class="row">
+    <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-5 offset-md-1 mb-3">
+      <form>
+        <h5>Subscribe to our newsletter</h5>
+        <p>Monthly digest of what's new and exciting from us.</p>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+          <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <p>© 2023 Company, Inc. All rights reserved.</p>
+    <ul class="list-unstyled d-flex">
+      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </div>
+</footer>
+</div> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Extract pet type from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const petType = urlParams.get('pettype');
+      console.log('Full URL:', window.location.href);
+      console.log('Pet Type:', petType);
+
+      // Fetch data from the API based on the extracted pet type
+      fetch(`http://localhost:9000/v1/tut/pettype?pettype=${petType}`)
+        .then(response => response.json())
+        .then(data => {
+          // Process the data and update the HTML
+          const horizontalPetCardsContainer = document.getElementById('horizontalPetCardsContainer');
+          const verticalPetCardsContainer = document.getElementById('verticalPetCardsContainer');
+
+          data.result.forEach((pet, index) => {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 col-sm-4';
+            card.innerHTML = `
+
+<div class="card">
+    <img src="${pet.pet_image}" class="card-img-top" style="width:100%; height:160px;" alt="${pet.pettitle}">
+    <div class="card-body">
+        <h5>${pet.pettitle}</h5>
+        <p class="card-text">${pet.petinfo1}..
+            <br/>
+            <center>
+                <b onclick="storePetTitle('${pet.pettitle}')" style="cursor: pointer;">view more</b>
+            </center>
+        </p>
+    </div>
+</div><br/>
+
+                `;
+
+            if (index < 3) {
+              horizontalPetCardsContainer.appendChild(card);
+            } else {
+              verticalPetCardsContainer.appendChild(card);
+            }
+          });
+        })
+        .catch(error => console.error('Error fetching pet data:', error));
+     
+
+    });
+
+    function storePetTitle(petTitle) {
+        localStorage.setItem('selectedPetTitle', petTitle);
+        redirectToPage('Description.html');
+    }
+
+    function redirectToPage(page) {
+        // Retrieve the stored pettitle from localStorage
+        const storedPetTitle = localStorage.getItem('selectedPetTitle');
+        
+        // Construct the URL with the pettitle parameter
+        const url = `${page}?pettitle=${encodeURIComponent(storedPetTitle)}`;
+        
+        // Redirect to the constructed URL
+        window.location.href = url;
+    }
+
+  </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Extract pet type from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const petType = urlParams.get('pettype');
+      console.log('Full URL:', window.location.href);
+      console.log('Pet Type:', petType);
+
+      // Fetch data from the API
+      fetch('http://localhost:9000/v1/')
+        .then(response => response.json())
+        .then(data => {
+          const carouselIndicators = document.getElementById('carouselIndicators');
+          const carouselInner = document.getElementById('carouselInner');
+
+          data.result.forEach((pet, index) => {
+            // Create carousel indicators
+            const indicator = document.createElement('button');
+            indicator.type = 'button';
+            indicator.setAttribute('data-bs-target', '#carouselExampleCaptions');
+            indicator.setAttribute('data-bs-slide-to', index);
+
+            // Set the active class based on the current pet type
+            if (petType && pet.image_name.toLowerCase() === petType.toLowerCase()) {
+              indicator.classList.add('active');
+            }
+
+            carouselIndicators.appendChild(indicator);
+
+            // Create carousel items
+            const carouselItem = document.createElement('div');
+            carouselItem.className = 'carousel-item';
+
+            // Set the active class based on the current pet type
+            if (petType && pet.image_name.toLowerCase() === petType.toLowerCase()) {
+              carouselItem.classList.add('active');
+            }
+
+            carouselItem.innerHTML = `
+                      <img src="${pet.image_url}" class="d-block w-100" style="height: 60vh; width: 70%;" alt="${pet.image_name}">
+                      <div class="carousel-caption d-none d-md-block" style="text-align: center; margin-bottom: 10%;">
+                        <a class="dropdown-item" href="./Cow.html?pettype=${pet.image_name.toLowerCase()}"><h1>${pet.image_name}</h1></a>
+                      </div>
+                  `;
+            carouselInner.appendChild(carouselItem);
+          });
+        })
+        .catch(error => console.error('Error fetching pet data:', error));
+
+      // Function to redirect to the specified page
+      window.redirectToPage = function (page) {
+        window.location.href = page;
+      };
+    });
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
